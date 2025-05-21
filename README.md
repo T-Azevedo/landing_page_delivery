@@ -2,6 +2,10 @@
 
 Bem-vindo ao repositório da **Landing Page**. Este projeto foi desenvolvido com foco em **responsividade**, **facilidade de pedidos**, integração com **WhatsApp** e suporte para **PWA (Progressive Web App)**.
 
+## 🌐 Acesse online
+
+> 🟢 [Clique aqui para acessar via GitHub Pages](https://T-Azevedo.github.io/landing_page_delivery)
+> 
 ## ✨ Funcionalidades
 
 - Interface moderna e responsiva com Bootstrap 5
