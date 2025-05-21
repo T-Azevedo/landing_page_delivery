@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Meta Tags SEO Otimizadas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurante Sabor Caseiro - Delivery de comida caseira com os melhores sabores da região. Peça online e receba em casa com rapidez e qualidade.">
+    <meta name="keywords" content="delivery, comida caseira, restaurante, pedido online, comida qualidade">
+    <meta name="author" content="Restaurante Sabor Caseiro">
+    <meta property="og:title" content="Sabor Caseiro - Delivery de Comida Caseira">
+    <meta property="og:description" content="Peça online e receba comida caseira de qualidade no conforto de sua casa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://saborcaseiro.com.br">
+    
+    <!-- Manifest PWA -->
+    <link rel="manifest" href="manifest.json">
+    
+    <title>Restaurante Sabor Caseiro - Delivery de Comida Caseira</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Schema.org para SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Sabor Caseiro",
+      "image": "https://img.freepik.com/vetores-premium/modelo-de-design-de-logotipo-de-restaurante-retro-vintage_633888-221.jpg",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Rua Principal, 123",
+        "addressLocality": "Rio de Janeiro",
+        "addressRegion": "RJ",
+        "postalCode": "20000-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-22.9068",
+        "longitude": "-43.1729"
+      },
+      "telephone": "+5521988984058",
+      "openingHours": "Mo-Su 11:00-23:00",
+      "priceRange": "$$",
+      "servesCuisine": ["Brasileira", "Italiana"]
+    }
+    </script>
+    
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <!-- Logo do Restaurante -->
+                <a class="navbar-brand" href="#">
+                    <img loading="lazy" src="https://img.freepik.com/vetores-premium/modelo-de-design-de-logotipo-de-restaurante-retro-vintage_633888-221.jpg" alt="Sabor Caseiro" class="img-fluid">
+                </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse" id="navbarMain">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cardapio">Cardápio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Delivery</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="d-flex">
+                        <button class="btn cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal">
+                            <i class="fas fa-shopping-cart fa-lg"></i>
+                            <span class="cart-count">0</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <img loading="lazy" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80" alt="Restaurante Sabor Caseiro" class="banner-background">
+        
+        <div class="container">
+            <div class="banner-content">
+                <h1 class="banner-title">Delivery de comida caseira</h1>
+                <p class="banner-subtitle">Sabores autênticos entregues na sua casa</p>
+                <a href="#cardapio" class="btn btn-primary btn-lg">Fazer Pedido</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="cardapio" class="menu-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nosso Cardápio</h2>
+                <p>Peça online e receba em casa</p>
+            </div>
+            
+            <div class="row">
+                <!-- Entradas -->
+                <div class="col-lg-6 menu-category">
+                    <h3 class="category-title">Entradas</h3>
+                    
+                    <div class="row">
+                        <!-- Item 1 -->
+                        <div class="col-md-6">
+                            <div class="menu-item">
+                                <img loading="lazy" src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Bruschetta" class="menu-item-img">
+                                <div class="menu-item-body">
+                                    <h4 class="menu-item-title">Bruschetta Italiana</h4>
+                                    <div class="menu-item-price">R$ 18,90</div>
+                                    <p class="menu-item-description">Pão italiano torrado com tomate fresco, manjericão e azeite de oliva extra virgem.</p>
+                                    
+                                    <div class="quantity-control">
+                                        <div class="quantity-btn minus">-</div>
+                                        <input type="number" class="quantity-input" value="1" min="1">
+                                        <div class="quantity-btn plus">+</div>
+                                    </div>
+                                    
+                                    <button class="btn btn-primary add-to-cart" data-item="Bruschetta Italiana" data-price="18.90">
+                                        <i class="fas fa-cart-plus me-2"></i>Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="col-md-6">
+                            <div class="menu-item">
+                                <img loading="lazy" src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Carpaccio" class="menu-item-img">
+                                <div class="menu-item-body">
+                                    <h4 class="menu-item-title">Carpaccio de Filé</h4>
+                                    <div class="menu-item-price">R$ 24,50</div>
+                                    <p class="menu-item-description">Finas fatias de filé mignon cru, temperadas com azeite, limão, alcaparras e rúcula.</p>
+                                    
+                                    <div class="quantity-control">
+                                        <div class="quantity-btn minus">-</div>
+                                        <input type="number" class="quantity-input" value="1" min="1">
+                                        <div class="quantity-btn plus">+</div>
+                                    </div>
+                                    
+                                    <button class="btn btn-primary add-to-cart" data-item="Carpaccio de Filé" data-price="24.50">
+                                        <i class="fas fa-cart-plus me-2"></i>Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pratos Principais -->
+                <div class="col-lg-6 menu-category">
+                    <h3 class="category-title">Pratos Principais</h3>
+                    
+                    <div class="row">
+                        <!-- Item 3 -->
+                        <div class="col-md-6">
+                            <div class="menu-item">
+                                <img loading="lazy" src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Filé Mignon" class="menu-item-img">
+                                <div class="menu-item-body">
+                                    <h4 class="menu-item-title">Filé Mignon</h4>
+                                    <div class="menu-item-price">R$ 59,90</div>
+                                    <p class="menu-item-description">Filé mignon grelhado, acompanha batatas rústicas e legumes sautés.</p>
+                                    
+                                    <div class="quantity-control">
+                                        <div class="quantity-btn minus">-</div>
+                                        <input type="number" class="quantity-input" value="1" min="1">
+                                        <div class="quantity-btn plus">+</div>
+                                    </div>
+                                    
+                                    <button class="btn btn-primary add-to-cart" data-item="Filé Mignon" data-price="59.90">
+                                        <i class="fas fa-cart-plus me-2"></i>Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 4 -->
+                        <div class="col-md-6">
+                            <div class="menu-item">
+                                <img loading="lazy" src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Risoto" class="menu-item-img">
+                                <div class="menu-item-body">
+                                    <h4 class="menu-item-title">Risoto de Funghi</h4>
+                                    <div class="menu-item-price">R$ 42,90</div>
+                                    <p class="menu-item-description">Risoto cremoso com cogumelos frescos, finalizado com parmesão e trufa.</p>
+                                    
+                                    <div class="quantity-control">
+                                        <div class="quantity-btn minus">-</div>
+                                        <input type="number" class="quantity-input" value="1" min="1">
+                                        <div class="quantity-btn plus">+</div>
+                                    </div>
+                                    
+                                    <button class="btn btn-primary add-to-cart" data-item="Risoto de Funghi" data-price="42.90">
+                                        <i class="fas fa-cart-plus me-2"></i>Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="contact-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Delivery</h2>
+                <p>Faça seu pedido agora mesmo</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-lg-12">
+                    <div class="contact-info">
+                        <div class="text-center mb-4">
+                            <i class="fas fa-phone-alt contact-icon"></i>
+                            <h3>Delivery</h3>
+                            <p class="mb-1">Faça seu pedido por telefone</p>
+                            <a href="tel:+5521988984058" class="btn btn-call">
+                                <i class="fas fa-phone-alt"></i>
+                                (21) 98898-4058
+                            </a>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <i class="fas fa-truck contact-icon"></i>
+                            <h3>Área de Entrega</h3>
+                            <div class="delivery-coverage">
+                                <p>Entregamos em toda Zona Sul e Centro</p>
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Botafogo</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Copacabana</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Ipanema</li>
+                                    <li><i class="fas fa-check-circle text-success me-2"></i>Centro</li>
+                                </ul>
+                                <p class="small text-muted mt-2">Consulte outros bairros</p>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <i class="fas fa-clock contact-icon"></i>
+                            <h3>Horário de Delivery</h3>
+                            <p class="mb-1">Todos os dias das 11h às 23h</p>
+                            <p class="small text-muted">Pedidos até 22h30</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img loading="lazy" src="https://img.freepik.com/vetores-premium/modelo-de-design-de-logotipo-de-restaurante-retro-vintage_633888-221.jpg" alt="Sabor Caseiro" class="footer-logo">
+                    <p>Restaurante especializado em delivery de comida caseira, oferecendo os melhores sabores com ingredientes frescos e selecionados.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/5521988984058"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-links">
+                        <h5>Links Rápidos</h5>
+                        <ul>
+                            <li><a href="#">Início</a></li>
+                            <li><a href="#cardapio">Cardápio</a></li>
+                            <li><a href="#contato">Delivery</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <div class="footer-links">
+                        <h5>Horário</h5>
+                        <ul>
+                            <li>Segunda a Domingo</li>
+                            <li>11h às 23h</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-links">
+                        <h5>Contato</h5>
+                        <ul>
+                            <li><i class="fas fa-phone-alt me-2"></i> (21) 98898-4058</li>
+                            <li><i class="fas fa-clock me-2"></i> Pedidos até 22h30</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p class="mb-0">&copy; 2023 Sabor Caseiro. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante do Carrinho -->
+    <button class="floating-cart-btn" data-bs-toggle="modal" data-bs-target="#cartModal">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="floating-cart-count">0</span>
+    </button>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Seu Pedido</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- Cart Items Section -->
+                    <div id="cart-items-section">
+                        <div id="cart-items">
+                            <p class="text-center">Seu carrinho está vazio</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <h5>Total: <span id="cart-total">R$ 0,00</span></h5>
+                        </div>
+                    </div>
+                    
+                    <!-- Address Verification Section -->
+                    <div id="address-verification" class="address-verification mt-4" style="display: none;">
+                        <h5 class="mb-3">Informações para Entrega</h5>
+                        
+                        <div class="mb-3">
+                            <label for="name-input" class="form-label">Nome Completo <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="name-input" placeholder="Digite seu nome completo">
+                            <div class="invalid-feedback" style="display: none;">Por favor, informe seu nome</div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-8 mb-3">
+                                <label for="street-input" class="form-label">Rua <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="street-input" placeholder="Nome da rua">
+                                <div class="invalid-feedback" style="display: none;">Por favor, informe o nome da rua</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="number-input" class="form-label">Número <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="number-input" placeholder="Nº">
+                                <div class="invalid-feedback" style="display: none;">Por favor, informe o número</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="neighborhood-input" class="form-label">Bairro <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="neighborhood-input" placeholder="Seu bairro">
+                            <div class="invalid-feedback" style="display: none;">Por favor, informe seu bairro</div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label for="cep-input" class="form-label">CEP (opcional)</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="cep-input" placeholder="00000-000" maxlength="9">
+                                <button class="btn btn-outline-secondary" id="verify-cep">Verificar</button>
+                            </div>
+                            <div id="cep-loading" class="cep-loading mt-2">
+                                <i class="fas fa-spinner fa-spin me-2"></i>Verificando CEP...
+                            </div>
+                        </div>
+                        
+                        <div id="delivery-area" class="delivery-area"></div>
+                    </div>
+
+                    <!-- Payment Section -->
+                    <div id="payment-section" class="address-verification mt-4" style="display: none;">
+                        <h5 class="mb-3">Forma de Pagamento</h5>
+                        
+                        <div class="payment-methods">
+                            <div class="payment-method">
+                                <input type="radio" id="payment-pix" name="payment-method" value="PIX" checked>
+                                <i class="fas fa-qrcode text-primary"></i>
+                                <label for="payment-pix">PIX</label>
+                            </div>
+                            
+                            <div class="payment-method">
+                                <input type="radio" id="payment-card" name="payment-method" value="Cartão">
+                                <i class="fas fa-credit-card text-primary"></i>
+                                <label for="payment-card">Cartão de Crédito/Débito</label>
+                            </div>
+                            
+                            <div class="payment-method">
+                                <input type="radio" id="payment-money" name="payment-method" value="Dinheiro">
+                                <i class="fas fa-money-bill-wave text-primary"></i>
+                                <label for="payment-money">Dinheiro</label>
+                            </div>
+                        </div>
+                        
+                        <div id="change-input" class="change-input">
+                            <label for="change-value" class="form-label mt-3">Precisa de troco para quanto?</label>
+                            <input type="text" class="form-control" id="change-value" placeholder="Ex: 100,00">
+                            <small class="text-muted">Informe o valor em dinheiro que você vai pagar</small>
+                        </div>
+                    </div>
+
+                    <!-- Order Summary Section -->
+                    <div id="order-summary" class="address-verification mt-4" style="display: none;">
+                        <h5 class="mb-3">Resumo do Pedido</h5>
+                        <div id="summary-items" class="mb-3"></div>
+                        <hr>
+                        <div class="mb-3">
+                            <h6>Endereço de Entrega</h6>
+                            <div id="summary-address"></div>
+                        </div>
+                        <hr>
+                        <div class="mb-3">
+                            <h6>Forma de Pagamento</h6>
+                            <div id="summary-payment"></div>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h5>Total:</h5>
+                            <h4 id="summary-total">R$ 0,00</h4>
+                        </div>
+                        <div class="form-floating mt-3">
+                            <textarea class="form-control" placeholder="Observações" id="order-notes" style="height: 80px"></textarea>
+                            <label for="order-notes">Observações (opcional)</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" id="back-to-cart" style="display: none;">Voltar</button>
+                    <button type="button" class="btn btn-secondary" id="back-to-address" style="display: none;">Voltar</button>
+                    <button type="button" class="btn btn-secondary" id="back-to-payment" style="display: none;">Voltar</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continuar Comprando</button>
+                    <button type="button" class="btn btn-primary" id="next-step" disabled>Avançar</button>
+                    <button type="button" class="btn btn-success" id="finish-order" style="display: none;">Finalizar Pedido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
